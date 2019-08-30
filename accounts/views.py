@@ -1,8 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import auth, messages
-from django.contrib.auth.decorators import login_required
 from .forms import UserLoginForm, UserRegistrationForm 
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
