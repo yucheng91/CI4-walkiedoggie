@@ -14,3 +14,8 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.form {
+  text-align:center;
+  padding:1rem;
+}
