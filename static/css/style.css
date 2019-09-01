@@ -28,3 +28,8 @@ p {
 .container-fluid {
   padding:1rem;
 }
+
+.upload {
+  height:auto;
+  width:100%;
+}
