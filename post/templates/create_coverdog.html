@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}WalkieDoggie - Be the Cover Dog{% endblock %}
+{% block page_heading %}Be the Cover Dog{% endblock %}
+{% block content %}
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
+  </header>
+  
+  <form method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+  {{ form }}
+  <input type='submit'/ class='btn btn-primary' value='Save'>
+  </form>
+
+<!--<div class="container-fluid">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12 col-md-4">-->
+<!--<div id="accordion">-->
+<!--  <div class="card">-->
+<!--    <div class="card-header" id="heading">-->
+<!--      <h5 class="mb-0">-->
+<!--        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">-->
+<!--          <img src="https://www.purina.com.au/-/media/Project/Purina/Main/Puppy-Articles/CategoryPages/puppy-exercising-carousel.jpg?h=410&la=en&w=730&hash=17AE2750E1B78A5AA6F0AFCD02AD7350" class="card-img-top" alt="...">-->
+<!--          <p>Collapsible Group Item #1</p>-->
+<!--        </button>-->
+<!--      </h5>-->
+<!--    </div>-->
+<!--    <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">-->
+<!--      <div class="card-body">-->
+<!--        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--    <div class="col-12 col-md-4">-->
+<!--<div id="accordion">-->
+<!--  <div class="card">-->
+<!--    <div class="card-header" id="heading">-->
+<!--      <h5 class="mb-0">-->
+<!--        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">-->
+<!--          <img src="https://www.purina.com.au/-/media/Project/Purina/Main/Puppy-Articles/CategoryPages/puppy-exercising-carousel.jpg?h=410&la=en&w=730&hash=17AE2750E1B78A5AA6F0AFCD02AD7350" class="card-img-top" alt="...">-->
+<!--          <p>Collapsible Group Item #1</p>        -->
+<!--        </button>-->
+<!--      </h5>-->
+<!--    </div>-->
+<!--    <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">-->
+<!--      <div class="card-body">-->
+<!--        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--    <div class="col-12 col-md-4">-->
+<!--<div id="accordion">-->
+<!--  <div class="card">-->
+<!--    <div class="card-header" id="heading">-->
+<!--      <h5 class="mb-0">-->
+<!--        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">-->
+<!--          <img src="https://www.purina.com.au/-/media/Project/Purina/Main/Puppy-Articles/CategoryPages/puppy-exercising-carousel.jpg?h=410&la=en&w=730&hash=17AE2750E1B78A5AA6F0AFCD02AD7350" class="card-img-top" alt="...">-->
+<!--          <p>Collapsible Group Item #1</p>-->
+<!--        </button>-->
+<!--      </h5>-->
+<!--    </div>-->
+<!--    <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">-->
+<!--      <div class="card-body">-->
+<!--        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--    <div class="col-12 col-md-4">-->
+<!--<div id="accordion">-->
+<!--  <div class="card">-->
+<!--    <div class="card-header" id="heading">-->
+<!--      <h5 class="mb-0">-->
+<!--        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">-->
+<!--          <img src="https://www.purina.com.au/-/media/Project/Purina/Main/Puppy-Articles/CategoryPages/puppy-exercising-carousel.jpg?h=410&la=en&w=730&hash=17AE2750E1B78A5AA6F0AFCD02AD7350" class="card-img-top" alt="..."><br>-->
+<!--          <p>Name : Ashley</p>-->
+<!--        </button>-->
+<!--      </h5>-->
+<!--    </div>-->
+<!--    <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">-->
+<!--      <div class="card-body">-->
+<!--        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+{% endblock %}

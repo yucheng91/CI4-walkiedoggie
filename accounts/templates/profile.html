@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block page_title %}{{ user }}'s Profile{% endblock %} {% block page_heading %}{{ user }}'s Profile{% endblock %} {% block content %}
+<header class="py-5 bg-image-full" style="background-image: url({% static " img/dog.jpg " %});">
+  <img class="img-fluid d-block mx-auto" src="{% static " img/SOSDlogo.png " %}" alt="SoSD">
+</header>
 
-{% block page_title %}{{ user }}'s Profile{% endblock %} 
-
-{% block page_heading %}{{ user }}'s Profile{% endblock %} 
-
-{% block content %}
-  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
-    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
-  </header>
-<p>Your Email : {{ user.email }}</p>
+<div class="container-fluid form">
+  <div class="row">
+    <div class="col">
+      <p>Your Email : {{ user.email }}</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

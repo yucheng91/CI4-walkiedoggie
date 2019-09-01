@@ -19,3 +19,12 @@ body {
   text-align:center;
   padding:1rem;
 }
+
+p {
+  text-decoration: none;
+  color:black;
+}
+
+.container-fluid {
+  padding:1rem;
+}
