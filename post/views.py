@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
 from .models import Post
 from .forms import PostForm
 
@@ -9,7 +10,7 @@ def walkingdog(request):
 def coverdog(request):
     post = Post.objects.all()
     return render(request, 'coverdog.html', {
-        'post':post
+        'post': post
     })
     
 def create_coverdog(request):
@@ -41,4 +42,14 @@ def edit_coverdog(request, id):
         form = PostForm(instance=post)
         return render(request, 'create_coverdog.html',{
             'form':form
+        })
+        
+def delete_coverdog(request, id):
+    post = get_object_or_404(Post, id=id)
+    if request.method =='POST':
+        post.delete()
+        return redirect(reverse('coverdog'))
+    else:
+        return render (request,"delete_coverdog.html",{
+            'post': post
         })

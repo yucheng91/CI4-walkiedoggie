@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}WalkieDoggie - Be the Cover Dog{% endblock %}
+{% block page_heading %}Be the Cover Dog{% endblock %}
+{% block content %}
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
+  </header>
+  
+  {% if user.is_superuser %}
+  <form method='POST' action="">
+    {% csrf_token %}
+  <p>Are you sure you want to delete: "{{post}}"?</p>
+  <input type='submit' class='btn btn-primary' value='Confirm'>
+  <a href='{% url 'coverdog' %}'class="btn btn-info">Back</a>
+  </form>
+  {% endif %}
+  
+  {% if not user.is_superuser %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2><i class="fa fa-paw" aria-hidden="true"></i> Hello! There's nothing to see here <i class="fa fa-paw" aria-hidden="true"></i></h2>
+        <p>For any assistance, please contact us directly at admin@walkiedoggie.com</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="{% static "img/lost.jpg" %}" alt="">
+      </div>
+      </div>
+  </div>
+  {% endif %}
+
+{% endblock %}
