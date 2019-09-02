@@ -37,7 +37,16 @@
           </div>
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
+                <div class="container-fluid">
+                <div class="row">
               {{ p.content }}
+                </div>
+                {% if user.is_superuser %}
+                <div class="row">
+                <a href='edit/{{ p.id }}' class='btn btn-info'>Edit</a>
+                </div>
+                {% endif %}
+                </div>
               </div>
             </div>
           </div>
