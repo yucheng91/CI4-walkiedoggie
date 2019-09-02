@@ -31,15 +31,14 @@ def create_coverdog(request):
 def edit_coverdog(request, id):
     post = get_object_or_404(Post, pk=id)
     if request.method == 'POST':
-        form = PostForm(request.POST,instance=post)
+        form = PostForm(request.POST, instance=post)
         if form.is_valid():
             new_blog_post = form.save(commit=False)
             new_blog_post.author = request.user
             new_blog_post.save()
-            return redirect('coverdog')
+            return redirect(reverse('coverdog'))
     else:
         form = PostForm(instance=post)
         return render(request, 'create_coverdog.html',{
             'form':form
         })
-        

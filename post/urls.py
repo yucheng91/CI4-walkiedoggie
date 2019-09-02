@@ -5,5 +5,5 @@ urlpatterns = [
     path('walkingdog/', walkingdog, name='walkingdog'),
     path('coverdog/', coverdog, name='coverdog'),
     path('coverdog/create/',create_coverdog,name="create_coverdog"),
-    path('coverdog/edit/',edit_coverdog,name="edit_coverdog")
+    path('coverdog/edit/<id>',edit_coverdog,name="edit_coverdog")
 ]
