@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}WalkieDoggie - Donation{% endblock %}
+{% block page_heading %}Help by donating{% endblock %}
+{% block content %}
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
+  </header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+        <form method="GET" action="{% url 'charge' %}">
+            <div class='form-group'>
+                <label class='label'>Amount</label>
+                <input type='text' class='form-control' name='amount'/>
+            </div>
+            <input type="submit" value="Donate!"/>
+        </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

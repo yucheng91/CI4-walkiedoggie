@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
     path('', include('django.contrib.auth.urls'),name='reset'),
-    path('', include('post.urls'))
+    path('', include('post.urls')),
+    path('', include('donate.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
