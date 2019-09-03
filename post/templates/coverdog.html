@@ -40,7 +40,11 @@
                   <img class="upload" src="{{p.cover.url}}" class="card-img-top" alt="..."/>
                     <h4>{{ p.title }}</h4>
                 </button>
+                <div class="row">
+                  <div class="col"></div>
                 <a href="vote/{{ p.id }}"><img class="vote" src="{% static "img/pet-shelter.png" %}"/></a><p>{{p.score}}</p>
+                  <div class="col"></div>
+                  </div>
               </h5>
           </div>
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
