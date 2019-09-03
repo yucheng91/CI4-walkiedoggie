@@ -1,23 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block page_title %}WalkieDoggie - Donation{% endblock %}
-{% block page_heading %}Help by donating{% endblock %}
 {% block content %}
   <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
+  
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>{% block page_heading %}Doggonation{% endblock %}</h1>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col">
+      <h5>Wondering how much to donate?</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-12 col-md-6">
+      <ul>
+        <li>$10 can provide 10 meals for a shelter dog.</li>
+        <li>$20 can fund an outreach event on animal cruelty.</li>
+        <li>$50 can fund 1 day’s hospitalization stay for a dog.</li>
+        <li>$100 can fund medical costs for a rescued dog.</li>
+        <li>$500 can fund a trap-neuter-rehome/release programme, thus eliminating stray puppies.</li>
+      </ul>
+      </div>
+    <div class="col"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
         <form method="GET" action="{% url 'charge' %}">
             <div class='form-group'>
                 <label class='label'>Amount</label>
-                <input type='text' class='form-control' name='amount'/>
+                <input type='number' step="0" class='form-control' name='amount' placeholder='SGD'>
             </div>
             <input type="submit" value="Donate!"/>
         </form>
     </div>
+    <div class="col"></div>
   </div>
 </div>
 

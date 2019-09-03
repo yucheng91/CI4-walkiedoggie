@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block page_title %}WalkieDoggie - Walking Dog{% endblock %}
-{% block page_heading %}Walking Dog{% endblock %}
 {% block content %}
   <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
   
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      {% block page_heading %}Walking Dog{% endblock %}
+    </div>
+  </div>
+</div>
   <div class="container-fluid">
   <div class="row">
     <div class="col">
-
 {% if user.is_superuser %}
 <a href='{% url 'create_walkingdog'%}' class='btn btn-primary'>Add New</a>
 {% endif %}

@@ -16,14 +16,14 @@ def charge(request):
                 'name': 'Donation',
                 'description':'A simple donation',
                 'amount':amount ,
-                'currency':'usd',
+                'currency':'sgd',
                 'quantity':1
             }
         ],
         success_url= request.build_absolute_uri(reverse('success')),
-        cancel_url=request.build_absolute_uri(reverse('cancel'))
+        cancel_url= request.build_absolute_uri(reverse('cancel')),
     )
-    return render(request, 'donate/charge.html', {
+    return render(request, 'charge.html', {
         'CHECKOUT_SESSION_ID': session.id,
         'publishable_key': settings.STRIPE_PUBLISHABLE_KEY
     })
@@ -31,7 +31,10 @@ def charge(request):
    
     
 def success(request):
-    return HttpResponse("Thank you for your donation!")
+    return render(request,'success.html')
     
 def cancel(request):
-    return HttpResponse("Sorry to see you go")
+    return render(request,'cancel.html')
+    
+    
+    

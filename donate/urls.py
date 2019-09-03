@@ -3,8 +3,7 @@ from .views import donate, charge, success, cancel
 
 urlpatterns = [
     path('donate/', donate, name='donate'),
-    path('charge/', charge, name='charge'),
-    path('success/', success, name='success'),
-    path('cancel/', cancel, name='cancel')
-  
+    path('donate/charge/', charge, name='charge'),
+    path('donate/success/', success, name='success'),
+    path('donate/cancel/', success, name='cancel')
 ] 
