@@ -1,5 +1,6 @@
 from django.db import models
 from accounts.models import MyUser
+from pyuploadcare.dj.models import ImageField 
 
 # Create your models here.
 class Post(models.Model):
@@ -7,7 +8,7 @@ class Post(models.Model):
     content = models.TextField(blank=False)
     created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
-    cover = models.ImageField(upload_to='images/', null=True)
+    cover = ImageField(blank=True, manual_crop="")
     score = models.PositiveIntegerField(default=0)
 
     def __str__(self):
@@ -18,7 +19,7 @@ class AdminPost(models.Model):
     content = models.TextField(blank=False)
     created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
-    cover = models.ImageField(upload_to='images/', null=True)
+    cover = ImageField(blank=True, manual_crop="")
 
     def __str__(self):
         return self.title
