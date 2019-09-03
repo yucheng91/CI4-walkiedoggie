@@ -8,6 +8,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
     cover = models.ImageField(upload_to='images/', null=True)
+    score = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title

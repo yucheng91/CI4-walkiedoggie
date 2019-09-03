@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import walkingdog,create_walkingdog, edit_walkingdog,delete_walkingdog, coverdog, create_coverdog, edit_coverdog,delete_coverdog
+from .views import walkingdog,create_walkingdog, edit_walkingdog,delete_walkingdog, coverdog, create_coverdog, edit_coverdog,delete_coverdog,vote_coverdog
 
 urlpatterns = [
     path('walkingdog/', walkingdog, name='walkingdog'),
@@ -10,4 +10,5 @@ urlpatterns = [
     path('coverdog/create/',create_coverdog,name="create_coverdog"),
     path('coverdog/edit/<id>',edit_coverdog,name="edit_coverdog"),
     path('coverdog/delete/<id>',delete_coverdog,name="delete_coverdog"),
+    path('coverdog/vote/<id>',vote_coverdog,name="vote_coverdog"),
 ]

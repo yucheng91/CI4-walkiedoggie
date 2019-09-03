@@ -6,8 +6,12 @@
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
   
-<div class="col">
-{% block page_heading %}Be the Cover Dog{% endblock %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>{% block page_heading %}Cover Dog{% endblock %}</h1>
+    </div>
+  </div>
 </div>
 
   <form method='POST' enctype="multipart/form-data">

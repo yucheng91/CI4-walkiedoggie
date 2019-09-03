@@ -3,15 +3,20 @@
 
 {% block page_title %}Login{%endblock%}
 
-{% block page_heading %}Login to your Account{% endblock%}
-
-
 {% block content %}
 
   <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
-  
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>{% block page_heading %}Log In{% endblock %}</h1>
+    </div>
+  </div>
+</div>
+
   <div class="container-fluid form">
      <div class="row">
          <div class="col">

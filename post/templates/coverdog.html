@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      {% block page_heading %}Be the Cover Dog{% endblock %}
+      <h1>{% block page_heading %}Be the Cover Dog{% endblock %}</h1>
     </div>
   </div>
 </div>
@@ -31,15 +31,16 @@
 <div class="container-fluid">
   <div class="row">
     {%for p in post %}
-      <div class="col col-md-4 fullcard">
+      <div class="col-12 col-sm-4 fullcard">
         <div id="accordion">
           <div class="card">
             <div class="card-header" id="heading">
               <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
                   <img class="upload" src="{{p.cover.url}}" class="card-img-top" alt="..."/>
-                    <h4>Name : {{ p.title }}</h4>
+                    <h4>{{ p.title }}</h4>
                 </button>
+                <a href="vote/{{ p.id }}"><img class="vote" src="{% static "img/pet-shelter.png" %}"/></a><p>{{p.score}}</p>
               </h5>
           </div>
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">

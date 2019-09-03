@@ -99,3 +99,9 @@ def delete_coverdog(request, id):
         return render (request,"delete_coverdog.html",{
             'post': post
         })
+        
+def vote_coverdog(request, id):
+    post = get_object_or_404(Post, id=id)
+    post.score += 1
+    post.save()
+    return redirect(reverse('coverdog'))

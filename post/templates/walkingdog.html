@@ -9,10 +9,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      {% block page_heading %}Walking Dog{% endblock %}
+      <h1>{% block page_heading %}Walking Dog{% endblock %}</h1>
     </div>
   </div>
 </div>
+
   <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -26,7 +27,7 @@
 <div class="container-fluid">
   <div class="row">
     {%for p in post %}
-      <div class="col col-md-4 fullcard">
+      <div class="col-12 col-md-4 fullcard">
         <div id="accordion">
           <div class="card">
             <div class="card-header" id="heading">

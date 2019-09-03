@@ -33,8 +33,14 @@ p {
 .upload {
   height:auto;
   width:100%;
+  border-radius: 10px;
 }
 
 .fullcard {
   padding-bottom:25px;
+}
+
+.vote{
+  height:45px;
+  width:auto;
 }
