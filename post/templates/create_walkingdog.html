@@ -15,10 +15,28 @@
   </div>
 </div>
 
+{% if user.is_superuser %}
   <form method='POST' enctype="multipart/form-data">
     {% csrf_token %}
   {{ form | crispy }}
   <input type='submit' class='btn btn-primary' value='Save'>
   </form>
+{% endif %}
+
+{% if not user.is_superuser %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2><i class="fa fa-paw" aria-hidden="true"></i> Hello! There's nothing to see here <i class="fa fa-paw" aria-hidden="true"></i></h2>
+        <p>For any assistance, please contact us directly at admin@walkiedoggie.com</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="{% static "img/lost.jpg" %}" alt="">
+      </div>
+      </div>
+  </div>
+{% endif %}
 
 {% endblock %}
