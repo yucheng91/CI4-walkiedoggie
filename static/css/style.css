@@ -3,6 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
  */
+ 
 body {
   padding-top: 56px;
 }
@@ -60,4 +61,31 @@ p {
 
 .button {
   text-align:center;
+}
+
+footer {
+  color:white;
+}
+
+span {
+  font-weight:lighter;
+}
+
+.socialmedia {
+  color:white;
+  text-decoration: None;
+}
+
+h5 {
+  padding:0.5rem;
+  text-decoration:underline;
+}
+
+.vote {
+  align-items: center;
+}
+
+h5 p {
+  font-size:1.5rem;
+  padding:0.5rem;
 }

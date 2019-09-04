@@ -74,10 +74,11 @@ The site is deployed using following methods:
 
 ## Credit
 
-Images & Background 
+Design 
 - icons8.com - Financial icon as the logo
 - webgradients.com - Providing CSS code for the background gradient
 - flaticon.com
+- Startbootstrap template for the basic layout 
 
 Acknowledgements 
 - inspiration for this project is from mobile expenses management such as Monefy- Money Manager,Goodbudget
