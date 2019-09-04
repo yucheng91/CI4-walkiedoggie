@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}Walkie Doggie - Account not exist{%endblock%}
+
+
+{% block content %}
+
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
+  </header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>{% block page_heading %}Oooops!{% endblock %}</h1>
+    </div>
+  </div>
+</div>
+
+{% if not user.is_authenticated %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2><i class="fa fa-paw" aria-hidden="true"></i> The account does not exist<i class="fa fa-paw" aria-hidden="true"></i></h2>
+        <p>You may wish to sign up for new account at the Register button above. For any further assistance, please contact us directly at admin@walkiedoggie.com</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="{% static "img/lost.jpg" %}" alt="">
+      </div>
+      </div>
+  </div>
+{% endif %}
+{% endblock %}

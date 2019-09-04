@@ -27,7 +27,8 @@ def login(request):
                 auth.login(user=user, request=request)
                 return redirect(reverse('index'))
             else:
-                login_form.add_error('None', "Invalid username or password")
+                # login_form.add_error('None', "Invalid username or password")
+                return render(request,'account_not_existed.html')
     else:
         login_form = UserLoginForm
         return render(request, 'login.html', {

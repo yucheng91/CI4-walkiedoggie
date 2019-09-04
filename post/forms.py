@@ -6,10 +6,22 @@ class PostForm(forms.ModelForm):
     cover = ImageField(label='Photo')
     class Meta:
         model = Post
-        fields = ('title', 'content','cover')
+        labels = {
+            "title":"Name",
+            "age" : "Estimated Age",
+            "sex" : "Gender",
+            "content":"Intro"
+        }
+        fields = ('title','age','sex','content','cover')
         
 class AdminPostForm(forms.ModelForm):
     cover = ImageField(label='Photo')
     class Meta:
         model = AdminPost
-        fields = ('title', 'content','cover')
+        labels = {
+            "title":"Name",
+            "age" : "Estimated Age",
+            "sex" : "Gender",
+            "content":"Intro"
+        }
+        fields = ('title','age','sex','content','cover')
