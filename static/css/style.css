@@ -57,3 +57,7 @@ p {
 .winkdog {
   border-radius:1rem;
 }
+
+.button {
+  text-align:center;
+}

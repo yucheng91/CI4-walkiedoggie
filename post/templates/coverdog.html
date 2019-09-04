@@ -42,7 +42,7 @@
                 </button>
                 <div class="row">
                   <div class="col"></div>
-                <a href="vote/{{ p.id }}"><img class="vote" src="{% static "img/pet-shelter.png" %}"/></a><p>{{p.score}}</p>
+                <a href="like/{{ p.id }}"><img class="vote" src="{% static "img/heart.png" %}"/></a><p>{{p.score}}</p>
                   <div class="col"></div>
                   </div>
               </h5>
@@ -50,22 +50,37 @@
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
                 <div class="container-fluid-p">
+                  <div class="row">
+                    <div class="col">
+                      Estimated Age : {{ p.age }}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Gender : {{ p.sex }}
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col">
+                      Fun facts about {{p.title}} : {{ p.content |linebreaks }}
+                    </div>
+                  </div>
+                  <br>
                 <div class="row">
                   <div class="col">
-              Fun facts about {{p.title}} : {{ p.content |linebreaks }}
+                    Owner : {{ p.author }}
+                  </div>
                 </div>
-                </div>
-                <div class="row">
-              <div class="col">
-              Owner : {{ p.author }}
-                </div>
-                </div>
+                <br>
                 {% if user.is_superuser %}
                 <div class="row">
-                <a href='edit/{{ p.id }}' class='btn btn-info'>Edit</a>
-                </div>
-                <div class="row">
-                <a href='delete/{{ p.id }}' class='btn btn-danger'>Delete</a>
+                  <div class="col-6 button">
+                  <a href='edit/{{ p.id }}' class='btn btn-info'>Edit</a>
+                  </div>
+                  <div class="col-6 button">
+                  <a href='delete/{{ p.id }}' class='btn btn-danger'>Delete</a>
+                  </div>
                 </div>
                 {% endif %}
                 </div>

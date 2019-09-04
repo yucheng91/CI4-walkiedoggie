@@ -42,15 +42,31 @@
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
                 <div class="container-fluid-p">
-                <div class="row">
-              {{ p.content |linebreaks }}
-                </div>
+                  <div class="row">
+                    <div class="col">
+                      Estimated Age : {{ p.age }}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Gender : {{ p.sex }}
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col">
+                      Intro : {{ p.content |linebreaks }}
+                    </div>
+                  </div>
+                  <br>
                 {% if user.is_superuser %}
                 <div class="row">
-                <a href='edit/{{ p.id }}' class='btn btn-info'>Edit</a>
-                </div>
-                <div class="row">
-                <a href='delete/{{ p.id }}' class='btn btn-danger'>Delete</a>
+                  <div class="col-6 button">
+                  <a href='edit/{{ p.id }}' class='btn btn-info'>Edit</a>
+                  </div>
+                  <div class="col-6 button">
+                  <a href='delete/{{ p.id }}' class='btn btn-danger'>Delete</a>
+                  </div>
                 </div>
                 {% endif %}
                 </div>

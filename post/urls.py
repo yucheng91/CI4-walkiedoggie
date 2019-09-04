@@ -10,5 +10,5 @@ urlpatterns = [
     path('coverdog/create/',create_coverdog,name="create_coverdog"),
     path('coverdog/edit/<id>',edit_coverdog,name="edit_coverdog"),
     path('coverdog/delete/<id>',delete_coverdog,name="delete_coverdog"),
-    path('coverdog/vote/<id>',vote_coverdog,name="vote_coverdog"),
+    path('coverdog/like/<id>',vote_coverdog,name="vote_coverdog"),
 ]
