@@ -26,7 +26,7 @@ SECRET_KEY = 'ynmtwqc!#r(3ondy08a=#3d-qassn+uv(%wfmt3=m+dk*s-=bl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['a848f5fe05f142d08fa904765fa5e672.vfs.cloud9.us-east-1.amazonaws.com']
+ALLOWED_HOSTS = ['a848f5fe05f142d08fa904765fa5e672.vfs.cloud9.us-east-1.amazonaws.com','yc-walkiedoggie.herokuapp.com']
 
 
 # Application definition

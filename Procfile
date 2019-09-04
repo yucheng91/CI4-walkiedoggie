@@ -1,0 +1,1 @@
+web: gunicorn walkie_project.wsgi:app
