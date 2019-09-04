@@ -10,7 +10,7 @@ class Post(models.Model):
     content = models.TextField(blank=False)
     created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
-    cover = ImageField(blank=True, manual_crop="",default="")
+    cover = ImageField(blank=False, manual_crop="")
     score = models.PositiveIntegerField(default=0)
 
     def __str__(self):
@@ -23,7 +23,7 @@ class AdminPost(models.Model):
     content = models.TextField(blank=False)
     created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
-    cover = ImageField(blank=True, manual_crop="",default="")
+    cover = ImageField(blank=False, manual_crop="")
 
     def __str__(self):
         return self.title
