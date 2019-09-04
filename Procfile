@@ -1,1 +1,1 @@
-web: gunicorn walkie_project.wsgi:app
+web: gunicorn walkie_project.wsgi:application
