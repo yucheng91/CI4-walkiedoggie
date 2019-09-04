@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}WalkieDoggie - Walking Dog{% endblock %}
+{% block content %}
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/walkdog.jpg" %});">
+    <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1><i class="fa fa-paw" aria-hidden="true"></i>{% block page_heading %}Walking Dog{% endblock %}<i class="fa fa-paw" aria-hidden="true"></i></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2><i class="fa fa-paw" aria-hidden="true"></i> Hello! Your post is missing an image! <i class="fa fa-paw" aria-hidden="true"></i></h2>
+        <p>Please upload an image and upload again! Thank you!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="{% static "img/lost.jpg" %}" alt="" class="img-fluid">
+      </div>
+      </div>
+  </div>
+
+{% endblock %}

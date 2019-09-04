@@ -12,20 +12,22 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h1>{% block page_heading %}Login{% endblock %}</h1>
+      <h1><i class="fa fa-paw" aria-hidden="true"></i>{% block page_heading %}Login{% endblock %}<i class="fa fa-paw" aria-hidden="true"></i></h1>
     </div>
   </div>
 </div>
 
   <div class="container-fluid form">
      <div class="row">
-         <div class="col">
+       <div class="col"></div>
+     <div class="col-12 col-md-8">
     <form method='POST'>
          {% csrf_token %}
          {{ form | crispy }}
-         <input type="submit">
+         <input class="btn btn-primary" type="submit" value="Submit">
     </form>
     </div>
+    <div class="col"></div>
     </div>
     </div>
 {% endblock %}

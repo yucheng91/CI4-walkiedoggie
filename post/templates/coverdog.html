@@ -46,11 +46,13 @@
                     <p>{{ p.title }}</p>
                 </button>
               </h5>
+              <div class="container-fluid">
                 <div class="row vote">
-                  <div class="col">Click here to like :<a href="like/{{ p.id }}"><img class="vote" src="{% static "img/heart.png" %}"/></a></div>
-                  <div class="col">Heart Received : {{p.score}}</div>
+                  <div class="col-12 col-sm-6">Click here to like :<a href="like/{{ p.id }}"><img class="vote" src="{% static "img/heart.png" %}"/></a></div>
+                  <div class="col-12 col-sm-6">Heart Received : {{p.score}}</div>
                 </div>
-          </div>
+              </div>
+            </div>
             <div id="collapse{{p.id}}" class="collapse" aria-labelledby="heading{{p.id}}" data-parent="#accordion">
               <div class="card-body">
                 <div class="container-fluid-p">

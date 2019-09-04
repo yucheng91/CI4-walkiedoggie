@@ -19,7 +19,8 @@ def create_walkingdog(request):
             new_blog_post.author = request.user
             new_blog_post.save()
             return redirect(reverse('walkingdog'))
-        pass
+        else:
+            return render(request,"image_error.html")
     else:
         form = AdminPostForm()
         return render(request, 'create_walkingdog.html', {
@@ -35,6 +36,8 @@ def edit_walkingdog(request, id):
             new_blog_post.author = request.user
             new_blog_post.save()
             return redirect(reverse('walkingdog'))
+        else:
+            return render(request,"image_error.html")
     else:
         form = AdminPostForm(instance=post)
         return render(request, 'create_walkingdog.html',{
@@ -68,7 +71,8 @@ def create_coverdog(request):
             new_blog_post.author = request.user
             new_blog_post.save()
             return redirect(reverse('coverdog'))
-        pass
+        else:
+            return render(request,"image_error.html")
     else:
         form = PostForm()
         return render(request, 'create_coverdog.html', {
@@ -84,6 +88,8 @@ def edit_coverdog(request, id):
             new_blog_post.author = request.user
             new_blog_post.save()
             return redirect(reverse('coverdog'))
+        else:
+            return render(request,"image_error.html")
     else:
         form = PostForm(instance=post)
         return render(request, 'create_coverdog.html',{

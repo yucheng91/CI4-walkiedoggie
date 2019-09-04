@@ -111,4 +111,28 @@ h5 p {
   height:40px;
   width:auto;
   }
+  
+  .card-header {
+    height:320px;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    font-size:90%;
+  }
+  .vote {
+  height:40px;
+  width:auto;
+  }
+  
+  .card-header {
+    height:320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-header {
+    height:auto;
+  }
 }

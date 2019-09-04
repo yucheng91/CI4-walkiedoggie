@@ -29,7 +29,7 @@ class UserRegistrationForm(UserCreationForm):
         username = self.cleaned_data.get('username')
         #2 check if the email is unique, using the Django ORM
         if User.objects.filter(email=email):
-            raise forms.ValidationError(u'Email address must be unique')
+            raise forms.ValidationError('Email address must be unique')
         return email
         
     def clean_password2(self):
