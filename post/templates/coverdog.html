@@ -9,7 +9,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h1>{% block page_heading %}Be the Cover Dog{% endblock %}</h1>
+      <h1><i class="fa fa-paw" aria-hidden="true"></i>{% block page_heading %}Be the Cover Dog{% endblock %}<i class="fa fa-paw" aria-hidden="true"></i></h1>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col">
+    <p> Share your favourite image of your dogs and the most liked photos will be receiving a dog cafe voucher by our generous sponsor!<br><br>
+    Winner of the month will also gets to be on the cover of our e-newsletter to share your story with the rest of us!</p>
     </div>
   </div>
 </div>
@@ -18,12 +24,11 @@
   <div class="row">
     <div class="col">
       {% if not user.is_authenticated %}
-<p>Please register to upload your own content :)</p>
-{% endif %}
-
-{% if user.is_authenticated %}
-<a href='{% url 'create_coverdog'%}' class='btn btn-primary'>Add New</a>
-{% endif %}
+      <p>Please register to upload your own content :)</p>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <a href='{% url 'create_coverdog'%}' class='btn btn-primary'>Add New</a>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -31,7 +36,7 @@
 <div class="container-fluid">
   <div class="row">
     {%for p in post %}
-      <div class="col-12 col-sm-4 fullcard">
+      <div class="col-12 col-md-4 fullcard">
         <div id="accordion">
           <div class="card">
             <div class="card-header" id="heading{{p.id}}">
@@ -41,10 +46,10 @@
                     <p>{{ p.title }}</p>
                 </button>
               </h5>
-                  <div class="row vote">
+                <div class="row vote">
                   <div class="col">Click here to like :<a href="like/{{ p.id }}"><img class="vote" src="{% static "img/heart.png" %}"/></a></div>
                   <div class="col">Heart Received : {{p.score}}</div>
-                  </div>
+                </div>
           </div>
             <div id="collapse{{p.id}}" class="collapse" aria-labelledby="heading{{p.id}}" data-parent="#accordion">
               <div class="card-body">
