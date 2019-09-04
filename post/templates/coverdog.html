@@ -2,7 +2,7 @@
 {% load static %}
 {% block page_title %}WalkieDoggie - Be the Cover Dog{% endblock %}
 {% block content %}
-  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/coverdog.jpg" %});">
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
 
@@ -38,7 +38,7 @@
               <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
                   <img class="upload" src="{{p.cover.cdn_url}}" class="card-img-top" alt="..."/>
-                    <h4>{{ p.title }}</h4>
+                    <p>{{ p.title }}</p>
                 </button>
                 <div class="row">
                   <div class="col"></div>
@@ -49,15 +49,15 @@
           </div>
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
-                <div class="container-fluid">
+                <div class="container-fluid-p">
                 <div class="row">
                   <div class="col">
-              Fun facts about {{p.title}} : {{ p.content }}
+              Fun facts about {{p.title}} : {{ p.content |linebreaks }}
                 </div>
                 </div>
                 <div class="row">
               <div class="col">
-              By : {{ p.author }}
+              Owner : {{ p.author }}
                 </div>
                 </div>
                 {% if user.is_superuser %}

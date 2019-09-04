@@ -3,7 +3,7 @@
 {% block page_title %}WalkieDoggie - Walking Dog{% endblock %}
 {% block content %}
 
-  <header class="py-5 bg-image-full" style="background-image: url({% static "img/dog.jpg" %});">
+  <header class="py-5 bg-image-full" style="background-image: url({% static "img/walkdog.jpg" %});">
     <img class="img-fluid d-block mx-auto" src="{% static "img/SOSDlogo.png" %}" alt="SoSD">
   </header>
   
@@ -41,9 +41,9 @@
           </div>
             <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordion">
               <div class="card-body">
-                <div class="container-fluid">
+                <div class="container-fluid-p">
                 <div class="row">
-              {{ p.content }}
+              {{ p.content |linebreaks }}
                 </div>
                 {% if user.is_superuser %}
                 <div class="row">

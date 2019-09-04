@@ -30,6 +30,11 @@ p {
   text-align:center;
 }
 
+.container-fluid-p {
+  padding:1rem;
+  text-align:left;
+}
+
 .upload {
   height:auto;
   width:100%;
@@ -47,4 +52,8 @@ p {
 
 .disclaimer {
   font-size:0.8rem;
+}
+
+.winkdog {
+  border-radius:1rem;
 }
