@@ -15,9 +15,9 @@
   </div>
   <div class="row">
     <div class="col">
-    <p>WalkieDoggie is a initiative done by SoSD to bring shelter dog to the park close to you. <br> 
+    <p>WalkieDoggie is a new initiative done by SoSD to bring shelter dog to the park close to you for interaction. <br> 
     We will be holding an shelter-dog-walking activities every Sunday bi-weekly at various park in Singapore (Schedule will be shared through our facebook page) <br>
-    For this pilot test, 9 of our most friendly dogs (and hopefully to find them a new home in the same time) are selected.</p>
+    For the pilot activity, 9 of our most friendly dogs (and hopefully to find them a new home in the same time) are selected.</p>
     </div>
   </div>
 </div>
@@ -36,17 +36,17 @@
   <div class="row">
     {%for p in post %}
       <div class="col-12 col-md-4 fullcard">
-        <div id="accordion">
+        <div id="accordion{{p.id}}">
           <div class="card">
             <div class="card-header" id="heading{{p.id}}">
               <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{p.id}}" aria-expanded="true" aria-controls="collapse{{p.id}}">
-                  <img class="upload" src="{{p.cover.cdn_url}}" class="card-img-top" alt="..."/>
+                  <img class="upload card-img-top" src="{{p.cover.cdn_url}}" alt="..."/>
                     <p>{{ p.title }}</p>
                 </button>
               </h5>
           </div>
-            <div id="collapse{{p.id}}" class="collapse" aria-labelledby="heading{{p.id}}" data-parent="#accordion">
+            <div id="collapse{{p.id}}" class="collapse" aria-labelledby="heading{{p.id}}" data-parent="#accordion{{p.id}}">
               <div class="card-body">
                 <div class="container-fluid-p">
                   <div class="row">

@@ -103,7 +103,7 @@ h5 p {
   padding:0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 904px) {
   body {
     font-size:90%;
   }
@@ -111,23 +111,8 @@ h5 p {
   height:40px;
   width:auto;
   }
-  
   .card-header {
-    height:320px;
-  }
-}
-
-@media (max-width: 960px) {
-  body {
-    font-size:90%;
-  }
-  .vote {
-  height:40px;
-  width:auto;
-  }
-  
-  .card-header {
-    height:320px;
+    height:500px;
   }
 }
 
