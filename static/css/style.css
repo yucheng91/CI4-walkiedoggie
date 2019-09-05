@@ -103,7 +103,7 @@ h5 p {
   padding:0.5rem;
 }
 
-@media (max-width: 904px) {
+@media (max-width: 960px) {
   body {
     font-size:90%;
   }
@@ -112,7 +112,7 @@ h5 p {
   width:auto;
   }
   .card-header {
-    height:500px;
+    height:350px;
   }
 }
 
