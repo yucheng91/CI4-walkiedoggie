@@ -19,13 +19,13 @@
   <div class="row">
     <div class="col"></div>
     <div class="col-12 col-md-8">
-  <form method='POST' action="">
-    {% csrf_token %}
-  <p>Are you sure you want to delete: "{{post}}"?</p>
-  <input type='submit' class='btn btn-primary' value='Confirm'>
-  <a href='{% url 'coverdog' %}'class="btn btn-info">Back</a>
-  </form>
-        </div>
+      <form method='POST' action="">
+        {% csrf_token %}
+      <p>Are you sure you want to delete: "{{post}}"?</p>
+      <input type='submit' class='btn btn-primary' value='Confirm'>
+      <a href='{% url 'coverdog' %}'class="btn btn-info">Back</a>
+      </form>
+    </div>
   <div class="col"></div>
   </div>
 </div>
@@ -43,7 +43,7 @@
       <div class="col">
         <img src="{% static "img/lost.jpg" %}" alt="" class="img-fluid">
       </div>
-      </div>
+    </div>
   </div>
   {% endif %}
 
